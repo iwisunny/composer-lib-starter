@@ -1,36 +1,28 @@
 <?php
+namespace Tests;
 
-use sunnyw\Starter\SampleClass;
+use sunnyw\ComposerLib\SampleClass;
 
 /**
- *  For each class in your library, there should be a corresponding Unit-Test for it
- *  Unit-Tests should be as much as possible independent from other test going on.
- * @author yourname
+ * Class SampleClassTest
+ * @package Tests
+ *
+ * Summary
+ * Description
+ * @author    Wang Xi <iwisunny@gmail.com>
+ * @copyright (C) 2017 Wang Xi. All rights reserved.
+ * @version 0.1
  */
-class SampleClassTest extends PHPUnit_Framework_TestCase
+class SampleClassTest extends \PHPUnit_Framework_TestCase
 {
-
-    /**
-     * Just check if the YourClass has no syntax error
-     * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
-     * any typo before you even use this library in a real project.
-
-     */
-    public function testIsThereAnySyntaxError()
+    public function test_sample_class()
     {
-        $var = new SampleClass;
-        $this->assertTrue(is_object($var));
+        $this->assertTrue(is_object(new SampleClass()));
     }
 
-    /**
-     * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
-     * any typo before you even use this library in a real project.
-
-     */
-    public function testFirstMethod()
+    public function test_not_implement()
     {
-        $var = new SampleClass;
-        $this->assertTrue($var->hello("hey") == 'Hello World');
+        //todo
+        $this->markTestIncomplete();
     }
-
 }
